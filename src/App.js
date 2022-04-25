@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { Client } from './Client';
 
 function App() {
+  const query = Client.items()
+  query.toPromise().then(response => {
+    console.log(response)
+  })
   return (
     <div className="App">
       <header className="App-header">
