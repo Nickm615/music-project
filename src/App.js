@@ -1,29 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 import { Client } from './Client';
+import {Header, Card} from "./Components";
 
 function App() {
-  const query = Client.items()
+  const query = Client.items().type('artist').depthParameter(5)
   query.toPromise().then(response => {
-    console.log(response)
+    let data = response;
   })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Header/>
+      <Card>
+        <h1>artist card</h1>
+      </Card>
+      <Card>
+        <h1>album card</h1>
+      </Card>
+      <Card>
+        <h1>song card</h1>
+      </Card>
+
+
+
     </div>
+    
+    
   );
 }
 
