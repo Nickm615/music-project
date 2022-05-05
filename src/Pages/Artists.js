@@ -1,5 +1,7 @@
 export default function Artists(props) {
     return(
-        <div></div>
+        <div>
+            <h1>Artist List</h1>
+        </div>
     )
 }

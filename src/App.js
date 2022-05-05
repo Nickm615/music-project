@@ -11,11 +11,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 
 function App() {
-  // // const query = Client.items().type('artist').depthParameter(5)
-  // // query.toPromise().then(response => {
-  // //   const data = response;
-  // //   console.log(data)
-  // })
+
   return (
     <Router>
       <div className="App">

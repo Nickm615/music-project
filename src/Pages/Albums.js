@@ -1,5 +1,7 @@
 export default function Albums(props) {
     return(
-        <div></div>
+        <div>
+            <h1>Album list</h1>
+        </div>
     )
 }
