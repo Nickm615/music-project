@@ -1,6 +1,17 @@
 import { Client } from "../Client"
-import { Header, Footer, Card} from "react"
+import Card from '../Components/Card'
 
-<Header>
-    <h1>test</h1>
-</Header>
+export default function Home() {
+    return(
+        <div className="home">
+            <h1>homie page</h1>
+            <Card />
+            <Card />
+            <Card />
+
+
+        </div>
+        
+    )
+}
+
