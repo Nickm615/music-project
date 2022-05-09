@@ -8,10 +8,11 @@ import { Client } from './Client';
 import { Card } from "./Components/Card";
 import { Header } from "./Components/Header"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Query } from './Utilities/Query';
 
 
 function App() {
-
+Query('artist')
   return (
     <Router>
       <div className="App">
