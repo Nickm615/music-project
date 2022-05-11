@@ -7,33 +7,27 @@ export default function Home() {
     const songRoute = "/Songs";
     const artistRoute = "/Artists";
     const albumRoute = "/Albums";
-    const [rc1, setRc1] = useState();
-    const [rc2, setRc2] = useState();
-    const [rc3, setRc3] = useState();
-
-    async function wait1() {
-        let art1 = await RandomCover();
-        setRc1(art1)
+    // Single state containing array of rcs
+    const [rc, setRc] = useState();
+    // One function calling randomcover and getting array
+        
         
     
-    };
-    async function wait2() {
-        let art2 = await RandomCover();
-        setRc2(art2);
-    
-    };
-    async function wait3() {
-        let art3 = await RandomCover();
-        setRc3(art3);
-    
-    }
-
     useEffect(() => {
-        wait1();
-        wait2();
-        wait3();
-    }, []);
+        console.log('Effect hook fires')
+            const getCovers = async ()=>{
+                setRc(await RandomCover(3))
 
+            }
+
+            getCovers()
+                
+            
+         
+            
+            
+    
+        },[]);
 
 
 
@@ -42,10 +36,25 @@ export default function Home() {
         
         <div className="home">
             <h1>homie page</h1>
+            {/* Add key corresponding to selected content item ID */}
+            {rc? (
+                <div>
+                    <Card route={artistRoute} title='Artists' art = {rc[0]}/>
+                    <Card route={albumRoute} title = 'Albums' art = {rc[1]}/>
+                    <Card route={songRoute} title = 'Songs' art = {rc[2]}/>
+                </div>
+                
+            ): (
+                <div>
+                    <h1>no Album art</h1>
+                    <Card route={artistRoute} title='Artists' />
+                    <Card route={albumRoute} title = 'Albums' />
+                    <Card route={songRoute} title = 'Songs' />
+                </div>
+    
+            )}
+
             
-            <Card route={artistRoute} title='Artists' art = {rc1} />
-            <Card route={albumRoute} title = 'Albums' art = {rc2}/>
-            <Card route={songRoute} title = 'Songs' art = {rc3}/>
 
 
         </div>

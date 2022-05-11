@@ -1,0 +1,1 @@
+// Pass props for width and height and generate asset URL

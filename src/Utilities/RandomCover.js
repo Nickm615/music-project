@@ -1,12 +1,15 @@
 import {Query} from "./Query.js";
-
-export default async function RandomCover(){
+// Refactor this to iterate and return array of covers using loop
+export default async function RandomCover(numberReturned){
   let response = await Query('album');
-  console.log(response)
-  let index = Math.floor(Math.random()*response.data.items.length)
-  let art = await response.data.items[index].elements.artwork.value[0].url
-  console.log(response.data.items[index].elements.artwork.value[0].url)
-   return art
+  let result = [];
+  for (let i = 0; i < numberReturned; i++) {
+    let index = Math.floor(Math.random()*response.data.items.length)
+    let art = await response.data.items[index].elements.artwork.value[0].url
+    result.push(art)
+  
+  }
+  return result
    
 };
 
