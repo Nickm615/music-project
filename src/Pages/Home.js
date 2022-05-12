@@ -1,4 +1,3 @@
-import { Client } from "../Client"
 import {useEffect, useState} from "react";
 import Card from '../Components/Card'
 import RandomCover from "../Utilities/RandomCover.js"
@@ -10,17 +9,12 @@ export default function Home() {
     // Single state containing array of rcs
     const [rc, setRc] = useState();
     // One function calling randomcover and getting array
-        
-        
-    
     useEffect(() => {
-        console.log('Effect hook fires')
             const getCovers = async ()=>{
                 setRc(await RandomCover(3))
+            };
 
-            }
-
-            getCovers()
+            getCovers();
                 
             
          
@@ -46,10 +40,9 @@ export default function Home() {
                 
             ): (
                 <div>
-                    <h1>no Album art</h1>
-                    <Card route={artistRoute} title='Artists' />
+                    {/* <Card route={artistRoute} title='Artists' />
                     <Card route={albumRoute} title = 'Albums' />
-                    <Card route={songRoute} title = 'Songs' />
+                    <Card route={songRoute} title = 'Songs' /> */}
                 </div>
     
             )}
