@@ -40,9 +40,6 @@ export default function Home() {
                 
             ): (
                 <div>
-                    {/* <Card route={artistRoute} title='Artists' />
-                    <Card route={albumRoute} title = 'Albums' />
-                    <Card route={songRoute} title = 'Songs' /> */}
                 </div>
     
             )}
