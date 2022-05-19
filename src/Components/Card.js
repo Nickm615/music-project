@@ -5,17 +5,18 @@ import Albums from "../Pages/Albums";
 import Artists from "../Pages/Artists";
 import Songs from "../Pages/Songs";
 import  RandomCover  from "../Utilities/RandomCover.js"
+import { Link } from "react-router-dom";
 const pHolder = require("../assets/p-holder.jpg")
 
 export default function Card(props) {
     return (
-        <a className='card-body' href={props.route}>
+        <Link className='card-body' to={props.route}>
             <div className='card'>
                 <h2>{props.title}</h2>
                 <img src= {props.art} alt = 'placeholder'/>
-                <p>{props.title}</p>
+                <p></p>
             </div>
-        </a>
+        </Link>
         
     )
 }
