@@ -1,22 +1,21 @@
-import { ItemMapper } from "@kentico/kontent-delivery";
 import { useEffect, useState } from "react";
-import { renderMatches, useParams } from "react-router";
+import {  useParams } from "react-router";
 import { GetArtist } from "../Utilities/Query";
-import Card from "../Components/Card";
+import ArtistDetailCard from "../Components/ArtistDetailCard";
 
 
 export default function IndividualArtist() {
-    const [data, setData] = useState(false);
+    const [response, setResponse] = useState();
     let params = useParams();
     useEffect(()=>{
         const getData = async ()=>{
-            setData(await GetArtist(params.name))
+            setResponse(await GetArtist(params.name))
         };
         getData();
-    },[]);
+    },[])
   return(
       <div>
-          {data? (<Card title = {data.item.elements.name.value} art = {data.item.elements.photo.value[0].url}></Card>):(<h1>{params.name}</h1>)}
+          {response? (<ArtistDetailCard title = {response.data.item.elements.name.value} art = {response.data.item.elements.photo.value[0].url} />) : (<h1>{params.name}</h1>)}
     </div>
   )
 }

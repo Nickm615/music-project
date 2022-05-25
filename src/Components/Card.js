@@ -1,10 +1,4 @@
 // This card will be passed the returned data of a random artist/album/song via prop
-import { Client } from "../Client"
-import {Query} from "../Utilities/Query.js";
-import Albums from "../Pages/Albums";
-import Artists from "../Pages/Artists";
-import Songs from "../Pages/Songs";
-import  RandomCover  from "../Utilities/RandomCover.js"
 import { Link } from "react-router-dom";
 const pHolder = require("../assets/p-holder.jpg")
 
