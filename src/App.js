@@ -5,6 +5,7 @@ import   Albums  from "./Pages/Albums"
 import   Artists  from "./Pages/Artists"
 import   Songs  from "./Pages/Songs"
 import IndividualArtist from './Pages/IndividualArtist';
+import IndividualAlbum from './Pages/IndividualAlbum';
 import { Header } from "./Components/Header"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -21,6 +22,8 @@ function App() {
           <Route exact path="/albums" element={<Albums/>} />
           <Route exact path="/songs" element={<Songs />} />
           <Route exact path="/artists/:name" element={<IndividualArtist />}/>
+          <Route exact path="/albums/:name" element={<IndividualAlbum />}/>
+
 
 
         </Routes>
