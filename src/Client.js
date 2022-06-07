@@ -22,4 +22,6 @@ let Client = new DeliveryClient({
     propertyNameResolver: camelCasePropertyNameResolver
   });
 
-export { Client} ;
+
+
+export { Client } ;
