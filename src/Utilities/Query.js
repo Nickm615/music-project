@@ -20,7 +20,9 @@ export async function GetSong(song){
     return response
 };
 
-
+// export async function TestFilter(){
+//     let response = await Client.items().type('album').containsFilter('elements.songs', 'codename of target linked item/component').toPromise()
+// }
 
   
 
