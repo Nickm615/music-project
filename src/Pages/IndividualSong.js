@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router";
 import { GetSong } from "../Utilities/Query";
-import SongDetailCard from "../Components/AlbumDetailCard";
+import SongDetailCard from "../Components/SongDetailCard";
 
 
 export default function IndividualSong() {
@@ -15,7 +15,14 @@ export default function IndividualSong() {
     },[])
   return(
       <div>
-          {response? (<SongDetailCard link = {response.data.items[0].elements.link.value}title = {response.data.item.elements.name.value} art = {response.data.item.elements.artwork.value[0].url} />) : (<h1>{params.name}</h1>)}
+          {response? (
+          <SongDetailCard link = {response.data.item.elements.link.value}
+          title = {response.data.item.elements.name.value} 
+          art = {response.data.item.elements.album.linkedItems[0].elements.artwork.value[0].url} 
+          lyrics = {response.data.item.elements.lyrics.value} 
+          album = {response}
+          />
+          ) : (<h1>{params.name}</h1>)}
     </div>
   )
 }

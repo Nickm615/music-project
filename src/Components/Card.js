@@ -8,7 +8,6 @@ export default function Card(props) {
             <div className='card'>
                 <h2>{props.title}</h2>
                 <img src= {props.art} alt = 'placeholder'/>
-                <p></p>
             </div>
         </Link>
         
