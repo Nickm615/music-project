@@ -19,7 +19,7 @@ export default function IndividualSong() {
           <SongDetailCard link = {response.data.item.elements.link.value}
           title = {response.data.item.elements.name.value} 
           art = {response.data.item.elements.album.linkedItems[0].elements.artwork.value[0].url} 
-          lyrics = {response.data.item.elements.lyrics.value} 
+          lyrics = {response.data.item.elements.lyrics} 
           album = {response}
           />
           ) : (<h1>{params.name}</h1>)}
