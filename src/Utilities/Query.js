@@ -21,7 +21,11 @@ export async function GetSong(song){
     // console.log(response)
     return response
 };
-
+export async function GetPerformer(performer){
+    let response = await Client.item(performer).depthParameter(10).toPromise();
+    console.log(response);
+    return response
+};
 // export async function TestFilter(){
 //     let response = await Client.items().type('album').containsFilter('elements.songs', 'codename of target linked item/component').toPromise()
 // }

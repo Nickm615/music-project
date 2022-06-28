@@ -15,7 +15,7 @@ export default function ArtistDetailCard(props) {
             )}
                 <h3>Performers:</h3>
                 {props.performers.map((performer) =>
-                <PerformerListItem name={performer.elements.name.value}/>
+                <PerformerListItem name={performer.elements.name.value} route = {`/performers/${performer.system.codename}`}/>
                 )}
 
             </div>

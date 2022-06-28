@@ -14,13 +14,8 @@ export default function IndividualAlbum() {
         const getAlbumData = async ()=>{
             setAlbumData(await GetAlbum(params.name))
         };
-        // const  getSongData = async ()=>{
-        //     albumData? (setSongData(await songParser(albumData))):getSongData();
-        //     return;
-        // };
 
         getAlbumData()
-        // getSongData();
         
     },[])
   return(
