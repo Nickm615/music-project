@@ -5,7 +5,7 @@ import   Albums  from "./Pages/Albums"
 import   Artists  from "./Pages/Artists"
 import   Songs  from "./Pages/Songs"
 import IndividualArtist from './Pages/IndividualArtist';
-import IndividualAlbum from './Pages/IndividualAlbum';
+import IndividualAlbum from './Pages/Individuals/IndividualAlbum';
 import IndividualSong from './Pages/IndividualSong';
 import IndividualPerformer from './Pages/IndividualPerformer'
 import { Header } from "./Components/Header"

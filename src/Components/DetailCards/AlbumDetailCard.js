@@ -1,4 +1,4 @@
-import SongListItem from "./SongListItem"
+import SongListItem from "../List Items/SongListItem"
 import { Link } from "react-router-dom"
 
 export default function AlbumDetailCard(props) {

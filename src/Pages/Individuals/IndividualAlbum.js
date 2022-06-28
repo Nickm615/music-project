@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router";
-import { GetAlbum } from "../Utilities/Query";
-import AlbumDetailCard from "../Components/AlbumDetailCard";
-import songParser from "../Utilities/songParser";
+import { GetAlbum } from "../../Utilities/Query";
+import AlbumDetailCard from "../../Components/DetailCards/AlbumDetailCard";
+import songParser from "../../Utilities/songParser";
 
 
 export default function IndividualAlbum() {
