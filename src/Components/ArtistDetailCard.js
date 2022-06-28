@@ -1,5 +1,5 @@
 import AlbumListItem from "./AlbumListItem"
-
+import PerformerListItem from "./PerformerListItem"
 
 export default function ArtistDetailCard(props) {
     return (
@@ -7,11 +7,16 @@ export default function ArtistDetailCard(props) {
             <h2>{props.title}</h2>
             <img src= {props.art} alt = 'artist image'/>
             <div>
-            {props.albums.map((album) => 
+                <h3>Albums</h3>
+                {props.albums.map((album) => 
             //    console.log(song)
                 <AlbumListItem route = {`/albums/${album.system.codename}`} title = {album.elements.name.value} art = {album.elements.artwork.value[0].url+'?w=100&h=100'}/>
                     
             )}
+                <h3>Performers:</h3>
+                {props.performers.map((performer) =>
+                <PerformerListItem name={performer.elements.name.value}/>
+                )}
 
             </div>
         </div>

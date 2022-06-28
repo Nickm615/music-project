@@ -15,7 +15,7 @@ export default function IndividualArtist() {
     },[])
   return(
       <div>
-          {response? (<ArtistDetailCard title = {response.data.item.elements.name.value} art = {response.data.item.elements.photo.value[0].url + '?w=300&h=300'} albums = {response.data.item.elements.albums.linkedItems} />) : (<h1>{params.name}</h1>)}
+          {response? (<ArtistDetailCard title = {response.data.item.elements.name.value} art = {response.data.item.elements.photo.value[0].url + '?w=300&h=300'} albums = {response.data.item.elements.albums.linkedItems} performers = {response.data.item.elements.performers.linkedItems} />) : (<h1>{params.name}</h1>)}
     </div>
   )
 }
