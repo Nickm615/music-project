@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router";
-import { GetPerformer } from "../Utilities/Query";
-import PerformerDetailCard from "../Components/PerformerDetailCard";
+import { GetPerformer } from "../../Utilities/Query";
+import PerformerDetailCard from "../../Components/DetailCards/PerformerDetailCard";
 
 
 export default function IndividualPerformer() {

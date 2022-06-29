@@ -1,5 +1,5 @@
-import AlbumListItem from "./AlbumListItem"
-import PerformerListItem from "./PerformerListItem"
+import AlbumListItem from "../List Items/AlbumListItem"
+import PerformerListItem from "../List Items/PerformerListItem"
 
 export default function ArtistDetailCard(props) {
     return (

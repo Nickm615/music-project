@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router";
-import { GetSong } from "../Utilities/Query";
-import SongDetailCard from "../Components/SongDetailCard";
+import { GetSong } from "../../Utilities/Query";
+import SongDetailCard from "../../Components/DetailCards/SongDetailCard";
 
 
 export default function IndividualSong() {

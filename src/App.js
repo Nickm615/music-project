@@ -4,10 +4,10 @@ import   Home  from "./Pages/Home"
 import   Albums  from "./Pages/Albums"
 import   Artists  from "./Pages/Artists"
 import   Songs  from "./Pages/Songs"
-import IndividualArtist from './Pages/IndividualArtist';
+import IndividualArtist from './Pages/Individuals/IndividualArtist';
 import IndividualAlbum from './Pages/Individuals/IndividualAlbum';
-import IndividualSong from './Pages/IndividualSong';
-import IndividualPerformer from './Pages/IndividualPerformer'
+import IndividualSong from './Pages/Individuals/IndividualSong';
+import IndividualPerformer from './Pages/Individuals/IndividualPerformer'
 import { Header } from "./Components/Header"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 

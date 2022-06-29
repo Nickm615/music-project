@@ -1,4 +1,4 @@
-import InstrumentListItem from "./InstrumentListItem";
+import InstrumentListItem from "../List Items/InstrumentListItem";
 
 
 export default function PerformerDetailCard(props) {

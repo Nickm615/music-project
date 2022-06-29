@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router";
-import { GetArtist } from "../Utilities/Query";
-import ArtistDetailCard from "../Components/ArtistDetailCard";
+import { GetArtist } from "../../Utilities/Query";
+import ArtistDetailCard from "../../Components/DetailCards/ArtistDetailCard";
 
 
 export default function IndividualArtist() {
