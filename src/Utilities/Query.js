@@ -13,7 +13,7 @@ export async function GetArtist(artist){
 };
 export async function GetAlbum(album){
     let response = await Client.item(album).depthParameter(10).toPromise();
-    // console.log(response)
+    console.log(response)
     return response
 };
 export async function GetSong(song){

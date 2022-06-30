@@ -8,7 +8,7 @@ export default function AlbumDetailCard(props) {
             <img src= {props.art} alt = 'album image'/>
             <div>
             {props.songs.map((song) => 
-                <SongListItem route = {`/songs/${song.system.codename}`} title = {song.elements.name.value}/>
+                <SongListItem key = {song.system.codename} route = {`/songs/${song.system.codename}`} title = {song.elements.name.value}/>
                     
             )}
 

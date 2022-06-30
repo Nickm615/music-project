@@ -1,10 +1,9 @@
 import parse from 'html-react-parser';
 import { createRichTextHtmlResolver, createAsyncRichTextHtmlResolver, linkedItemsHelper, urlResolver, contentItemResolver, contentItemHtml } from '@kentico/kontent-delivery';
 import { nodeParser, asyncNodeParser } from '@kentico/kontent-delivery-node-parser';
+import playButton from "../../assets/Spotify-Play-Button.png"
 
 export default function SongDetailCard(props) {
-    const projectId = process.env.REACT_APP_PROJECT_ID || '';
-    const previewApiKey = process.env.REACT_APP_PREVIEW_API_KEY || '';
     const richTextElement = props.lyrics;
     console.log(richTextElement)
     const resolvedRichText = createRichTextHtmlResolver().resolveRichText({
@@ -43,6 +42,9 @@ export default function SongDetailCard(props) {
             <div className="card">
                 <h2>{props.title}</h2>
                 <img src= {props.art + '?w=300&h=300'} alt = 'album image'/>
+                <a href={props.link}>
+                    <img style={{height:"50px", display:"block", margin:"auto"}} src = {playButton}/>
+                </a>
                 
                 
                 <div>

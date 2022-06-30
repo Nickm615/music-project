@@ -10,12 +10,12 @@ export default function ArtistDetailCard(props) {
                 <h3>Albums</h3>
                 {props.albums.map((album) => 
             //    console.log(song)
-                <AlbumListItem route = {`/albums/${album.system.codename}`} title = {album.elements.name.value} art = {album.elements.artwork.value[0].url+'?w=100&h=100'}/>
+                <AlbumListItem key = {album.system.codename} route = {`/albums/${album.system.codename}`} title = {album.elements.name.value} art = {album.elements.artwork.value[0].url+'?w=100&h=100'}/>
                     
             )}
                 <h3>Performers:</h3>
                 {props.performers.map((performer) =>
-                <PerformerListItem name={performer.elements.name.value} route = {`/performers/${performer.system.codename}`}/>
+                <PerformerListItem key = {performer.system.codename} name={performer.elements.name.value} route = {`/performers/${performer.system.codename}`}/>
                 )}
 
             </div>
