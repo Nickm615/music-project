@@ -6,7 +6,7 @@ export default function Card(props) {
     return (
         <Link className='card-body' to={props.route}>
             <div className='card'>
-                <h2>{props.title}</h2>
+                <h2 className="card-heading">{props.title}</h2>
                 <img src= {props.art} alt = 'placeholder'/>
             </div>
         </Link>
