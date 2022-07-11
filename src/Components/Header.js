@@ -11,10 +11,11 @@ function Header(props) {
             <p className='header-text'>This is a CHILL ZONE 🧊🧊🧊</p>
             <p>Current language is {lang}</p>
             <div className="lang-selector">
+                <button onClick={updateLang} id="en">Spanish</button>
                 <button onClick={updateLang} id="es">Spanish</button>
-                <button id="fr">French</button>
-                <button id="ch">Chinese</button>
-                <button id="ar">Arabic</button>
+                <button onClick={updateLang} id="fr">French</button>
+                <button onClick={updateLang} id="ch">Chinese</button>
+                <button onClick={updateLang} id="ar">Arabic</button>
 
             </div>
         </div>

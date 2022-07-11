@@ -16,8 +16,8 @@ export function useLangUpdate() {
 export function LanguageProvider ({ children })  {
     const [lang, setLang] = useState('en');
 
-    function updateLanguage(){
-        setLang(this.id);
+    function updateLanguage(event){
+        setLang(event.target.id);
     };
 
 return (
