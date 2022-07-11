@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Card from '../Components/Card'
 import RandomCover from "../Utilities/RandomCover.js"
 import { SpinnerCircular } from 'spinners-react';
+import { createRichTextJsonResolver } from "@kentico/kontent-delivery";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     const [rc, setRc] = useState();
     const [isLoaded, setIsLoaded] = useState(false)
     // One function calling randomcover and getting array
+    // console.log(this.context)
     useEffect(() => {
             const getCovers = async ()=>{
                 setRc(await RandomCover(3));
