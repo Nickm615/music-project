@@ -33,7 +33,6 @@ export default function Home() {
             return(
                 <div className="home">
                     <h1>homie page</h1>
-                    {/* Add key corresponding to selected content item ID */}
                     {isLoaded? (
                         <div>
                             <Card route="/Artists" title='Artists' art = {rc[0]}/>
@@ -49,7 +48,6 @@ export default function Home() {
             return(
                 <div className="home">
                     <h1>homie page</h1>
-                    {/* Add key corresponding to selected content item ID */}
                     {isLoaded? (
                         <div>
                             <Card route="/Artists" title='Artistas' art = {rc[0]}/>
@@ -65,7 +63,6 @@ export default function Home() {
             return(
                 <div className="home">
                     <h1>homie page</h1>
-                    {/* Add key corresponding to selected content item ID */}
                     {isLoaded? (
                         <div>
                             <Card route="/Artists" title='Artistes' art = {rc[0]}/>
@@ -81,7 +78,6 @@ export default function Home() {
         return(
             <div className="home">
                 <h1>homie page</h1>
-                {/* Add key corresponding to selected content item ID */}
                 {isLoaded? (
                     <div>
                         <Card route="/Artists" title='艺术家' art = {rc[0]}/>
@@ -97,7 +93,6 @@ export default function Home() {
             return(
                 <div className="home">
                     <h1>homie page</h1>
-                    {/* Add key corresponding to selected content item ID */}
                     {isLoaded? (
                         <div>
                             <Card route="/Artists" title='الفنانين' art = {rc[0]}/>
