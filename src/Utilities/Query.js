@@ -8,12 +8,12 @@ export async function GetItemsByType(type){
 
 export async function GetArtist(artist){
     let response = await Client.item(artist).depthParameter(10).toPromise();
-    console.log(response)
+    // console.log(response)
     return response
 };
 export async function GetAlbum(album){
     let response = await Client.item(album).depthParameter(10).toPromise();
-    console.log(response)
+    // console.log(response)
     return response
 };
 export async function GetSong(song){
@@ -23,9 +23,14 @@ export async function GetSong(song){
 };
 export async function GetPerformer(performer){
     let response = await Client.item(performer).depthParameter(10).toPromise();
-    console.log(response);
+    // console.log(response);
     return response
 };
+export async function GetHeading(lang){
+    let response = await Client.item('welcome').languageParameter(lang).depthParameter(10).toPromise();
+    console.log(response)
+    return response
+}
 // export async function TestFilter(){
 //     let response = await Client.items().type('album').containsFilter('elements.songs', 'codename of target linked item/component').toPromise()
 // }

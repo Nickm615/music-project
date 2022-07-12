@@ -1,16 +1,16 @@
 import {useEffect, useState} from "react";
+import { useLang, useLangUpdate } from "../Utilities/GlobalContext";
 import Card from '../Components/Card'
 import RandomCover from "../Utilities/RandomCover.js"
 import { SpinnerCircular } from 'spinners-react';
-import { createRichTextJsonResolver } from "@kentico/kontent-delivery";
 
 
 export default function Home() {
-    // Single state containing array of rcs
+    const lang = useLang();
+    const updateLang = useLangUpdate();
     const [rc, setRc] = useState();
     const [isLoaded, setIsLoaded] = useState(false)
-    // One function calling randomcover and getting array
-    // console.log(this.context)
+
     useEffect(() => {
             const getCovers = async ()=>{
                 setRc(await RandomCover(3));
@@ -28,26 +28,107 @@ export default function Home() {
 
 
 
-
-    return(
-        
-        <div className="home">
-            <h1>homie page</h1>
-            {/* Add key corresponding to selected content item ID */}
-            {isLoaded? (
-                <div>
-                    <Card route="/Artists" title='Artists' art = {rc[0]}/>
-                    <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
-                    <Card route="/Songs" title = 'Songs' art = {rc[2]}/>
+    switch (lang) {
+        case 'en':
+            return(
+                <div className="home">
+                    <h1>homie page</h1>
+                    {/* Add key corresponding to selected content item ID */}
+                    {isLoaded? (
+                        <div>
+                            <Card route="/Artists" title='Artists' art = {rc[0]}/>
+                            <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
+                            <Card route="/Songs" title = 'Songs' art = {rc[2]}/>
+                        </div>
+                        
+                    ): (<SpinnerCircular />)}
                 </div>
                 
-            ): (<SpinnerCircular />)}
-
+            )
+        case 'es':
+            return(
+                <div className="home">
+                    <h1>homie page</h1>
+                    {/* Add key corresponding to selected content item ID */}
+                    {isLoaded? (
+                        <div>
+                            <Card route="/Artists" title='Artistas' art = {rc[0]}/>
+                            <Card route="/Albums" title = 'Álbumes' art = {rc[1]}/>
+                            <Card route="/Songs" title = 'Canciones' art = {rc[2]}/>
+                        </div>
+                        
+                    ): (<SpinnerCircular />)}
+                </div>
+                
+            )
+        case 'fr':
+            return(
+                <div className="home">
+                    <h1>homie page</h1>
+                    {/* Add key corresponding to selected content item ID */}
+                    {isLoaded? (
+                        <div>
+                            <Card route="/Artists" title='Artistes' art = {rc[0]}/>
+                            <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
+                            <Card route="/Songs" title = 'Chansons' art = {rc[2]}/>
+                        </div>
+                        
+                    ): (<SpinnerCircular />)}
+                </div>
+                
+            )
+        case 'zh':
+        return(
+            <div className="home">
+                <h1>homie page</h1>
+                {/* Add key corresponding to selected content item ID */}
+                {isLoaded? (
+                    <div>
+                        <Card route="/Artists" title='艺术家' art = {rc[0]}/>
+                        <Card route="/Albums" title = '相册' art = {rc[1]}/>
+                        <Card route="/Songs" title = '歌曲' art = {rc[2]}/>
+                    </div>
+                    
+                ): (<SpinnerCircular />)}
+            </div>
             
-
-
-        </div>
+        )
+        case 'ar':
+            return(
+                <div className="home">
+                    <h1>homie page</h1>
+                    {/* Add key corresponding to selected content item ID */}
+                    {isLoaded? (
+                        <div>
+                            <Card route="/Artists" title='الفنانين' art = {rc[0]}/>
+                            <Card route="/Albums" title = 'ألبومات' art = {rc[1]}/>
+                            <Card route="/Songs" title = 'الأغاني' art = {rc[2]}/>
+                        </div>
+                        
+                    ): (<SpinnerCircular />)}
+                </div>
+                
+            )
+    
         
-    )
+    
+
+        default:
+            return(
+                <div className="home">
+                    <h1>homie page</h1>
+                    {/* Add key corresponding to selected content item ID */}
+                    {isLoaded? (
+                        <div>
+                            <Card route="/Artists" title='Artists' art = {rc[0]}/>
+                            <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
+                            <Card route="/Songs" title = 'Songs' art = {rc[2]}/>
+                        </div>
+                        
+                    ): (<SpinnerCircular />)}
+                </div>
+                
+            )
+    }
 }
 
