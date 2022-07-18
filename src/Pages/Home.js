@@ -35,9 +35,9 @@ export default function Home() {
                     <h1>homie page</h1>
                     {isLoaded? (
                         <div>
-                            <Card route="/Artists" title='Artists' art = {rc[0]}/>
-                            <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
-                            <Card route="/Songs" title = 'Songs' art = {rc[2]}/>
+                            <Card route="/artists" title='Artists' art = {rc[0]}/>
+                            <Card route="/albums" title = 'Albums' art = {rc[1]}/>
+                            <Card route="/songs" title = 'Songs' art = {rc[2]}/>
                         </div>
                         
                     ): (<SpinnerCircular />)}
