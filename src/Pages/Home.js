@@ -65,9 +65,9 @@ export default function Home() {
                     <h1>homie page</h1>
                     {isLoaded? (
                         <div>
-                            <Card route="/Artists" title='Artistes' art = {rc[0]}/>
-                            <Card route="/Albums" title = 'Albums' art = {rc[1]}/>
-                            <Card route="/Songs" title = 'Chansons' art = {rc[2]}/>
+                            <Card route="/artistes" title='Artistes' art = {rc[0]}/>
+                            <Card route="/albums" title = 'Albums' art = {rc[1]}/>
+                            <Card route="/chansons" title = 'Chansons' art = {rc[2]}/>
                         </div>
                         
                     ): (<SpinnerCircular />)}
@@ -80,9 +80,9 @@ export default function Home() {
                 <h1>homie page</h1>
                 {isLoaded? (
                     <div>
-                        <Card route="/Artists" title='艺术家' art = {rc[0]}/>
-                        <Card route="/Albums" title = '相册' art = {rc[1]}/>
-                        <Card route="/Songs" title = '歌曲' art = {rc[2]}/>
+                        <Card route="/艺术家" title='艺术家' art = {rc[0]}/>
+                        <Card route="/专辑" title = '相册' art = {rc[1]}/>
+                        <Card route="/歌曲" title = '歌曲' art = {rc[2]}/>
                     </div>
                     
                 ): (<SpinnerCircular />)}
@@ -95,9 +95,9 @@ export default function Home() {
                     <h1>homie page</h1>
                     {isLoaded? (
                         <div>
-                            <Card route="/Artists" title='الفنانين' art = {rc[0]}/>
-                            <Card route="/Albums" title = 'ألبومات' art = {rc[1]}/>
-                            <Card route="/Songs" title = 'الأغاني' art = {rc[2]}/>
+                            <Card route="/الفنانين" title='الفنانين' art = {rc[0]}/>
+                            <Card route="/ألبومات" title = 'ألبومات' art = {rc[1]}/>
+                            <Card route="/الأغاني" title = 'الأغاني' art = {rc[2]}/>
                         </div>
                         
                     ): (<SpinnerCircular />)}
