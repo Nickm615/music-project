@@ -18,6 +18,7 @@ export function LanguageProvider ({ children })  {
 
     function updateLanguage(event){
         setLang(event.target.id);
+        console.log(lang)
     };
 
 return (

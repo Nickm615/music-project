@@ -48,7 +48,6 @@ export default function SongDetailCard(props) {
                 
                 
                 <div>
-                    <h1>lyrics</h1>
                     {parse(resolvedRichText.html)}
                 </div>
                 

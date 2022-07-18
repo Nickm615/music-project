@@ -16,6 +16,7 @@ function Header(props) {
             setIsLoaded(true);
         };
         getData();
+        console.log(lang);
 
     },[lang])
         return (

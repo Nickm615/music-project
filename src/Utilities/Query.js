@@ -16,8 +16,8 @@ export async function GetAlbum(album){
     // console.log(response)
     return response
 };
-export async function GetSong(song){
-    let response = await Client.item(song).depthParameter(10).toPromise();
+export async function GetSong(song, lang){
+    let response = await Client.item(song).depthParameter(10).languageParameter(lang).toPromise();
     // console.log(response)
     return response
 };
@@ -28,7 +28,6 @@ export async function GetPerformer(performer){
 };
 export async function GetHeading(lang){
     let response = await Client.item('welcome').languageParameter(lang).depthParameter(10).toPromise();
-    console.log(response)
     return response
 }
 // export async function TestFilter(){

@@ -3,19 +3,20 @@ import {  useParams } from "react-router";
 import { GetSong } from "../../Utilities/Query";
 import SongDetailCard from "../../Components/DetailCards/SongDetailCard";
 import { SpinnerCircular } from 'spinners-react';
-
+import {useLang, useLangUpdate} from "../../Utilities/GlobalContext"
 
 export default function IndividualSong() {
+    const lang = useLang();
     const [isLoaded, setIsLoaded] = useState(false);
     const [response, setResponse] = useState();
     let params = useParams();
     useEffect(()=>{
         const getData = async ()=>{
-            setResponse(await GetSong(params.name))
+            setResponse(await GetSong(params.name, lang))
             setIsLoaded(true)
         };
         getData();
-    },[])
+    },[lang])
   return(
       <div>
           {isLoaded? (
