@@ -3,14 +3,17 @@ import {  useParams } from "react-router";
 import { GetArtist } from "../../Utilities/Query";
 import ArtistDetailCard from "../../Components/DetailCards/ArtistDetailCard";
 import { SpinnerCircular } from 'spinners-react';
+import { useLocation } from "react-router";
 
 export default function IndividualArtist() {
+    const location = useLocation();
     const [isLoaded, setIsLoaded] = useState(false);
     const [response, setResponse] = useState();
     let params = useParams();
     useEffect(()=>{
+        const preview = location.pathname.includes('preview')
         const getData = async ()=>{
-            setResponse(await GetArtist(params.name));
+            setResponse(await GetArtist(params.name, preview));
             setIsLoaded(true);
         };
         getData();

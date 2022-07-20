@@ -1,5 +1,5 @@
 import { camelCasePropertyNameResolver, DeliveryClient } from '@kentico/kontent-delivery';
-import packageInfo from "../package.json";
+import packageInfo from "../../package.json";
 
 const sourceTrackingHeaderName = "X-KC-SOURCE";
 
@@ -22,6 +22,21 @@ let Client = new DeliveryClient({
     propertyNameResolver: camelCasePropertyNameResolver
   });
 
+  let PreviewClient = new DeliveryClient({
+    projectId: projectId,
+    previewApiKey: previewApiKey,
+    defaultQueryConfig: {
+      usePreviewMode: true,
+    },
+    globalHeaders: (_queryConfig) => [
+      {
+        header: sourceTrackingHeaderName,
+        value: `${packageInfo.name};${packageInfo.version}`,
+      },
+    ],
+    propertyNameResolver: camelCasePropertyNameResolver
+  });
 
 
-export { Client } ;
+
+export { Client, PreviewClient } ;

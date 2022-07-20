@@ -1,5 +1,4 @@
-import React, { useContext,createContext, useState } from 'react';
-
+import React, { useContext, useState } from 'react';
 const LangContext = React.createContext();
 const LangUpdateContext = React.createContext()
 
@@ -18,7 +17,6 @@ export function LanguageProvider ({ children })  {
 
     function updateLanguage(event){
         setLang(event.target.id);
-        console.log(lang)
     };
 
 return (
