@@ -29,7 +29,7 @@ function Navigation() {
                 artists: 'artistas',
                 albums: '%C3%A1lbumes',
                 songs: 'canciones',
-                performers: 'músicos'
+                performers: 'm%C3%BAsicos'
             })
             break;
           case 'fr':
@@ -45,7 +45,7 @@ function Navigation() {
                 artists: '%E8%89%BA%E6%9C%AF%E5%AE%B6',
                 albums: '%E4%B8%93%E8%BE%91',
                 songs: '%E6%AD%8C%E6%9B%B2',
-                performers:'音乐家'
+                performers:'%E9%9F%B3%E4%B9%90%E5%AE%B6'
             })
             break;
           case 'ar':
@@ -53,7 +53,7 @@ function Navigation() {
                 artists: '%D8%A7%D9%84%D9%81%D9%86%D8%A7%D9%86%D9%8A%D9%86',
                 albums: '%D8%A3%D9%84%D8%A8%D9%88%D9%85%D8%A7%D8%AA',
                 songs: '%D8%A7%D9%84%D8%A3%D8%BA%D8%A7%D9%86%D9%8A',
-                performers: 'الموسيقيين'
+                performers: '%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%8A%D9%82%D9%8A%D9%8A%D9%86'
             })
             break;
             case 'en':
