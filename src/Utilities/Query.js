@@ -3,13 +3,13 @@ import {Client, PreviewClient} from "./Client.js";
 export async function GetItemsByType(type, preview){
     if(preview===true){
         let response = await PreviewClient.items().type(type).depthParameter(10).toPromise();
-        // console.log(response)
+        console.log(response)
         return response;
     
     }
     else{
         let response = await Client.items().type(type).depthParameter(10).toPromise();
-        // console.log(response)
+        console.log(response)
         return response;
     
     }
