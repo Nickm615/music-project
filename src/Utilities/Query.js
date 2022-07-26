@@ -73,6 +73,7 @@ export async function GetPerformer(performer, preview){
 };
 export async function GetHeading(lang){
     let response = await Client.item('welcome').languageParameter(lang).depthParameter(10).toPromise();
+    console.log(response)
     return response
 }
 // export async function TestFilter(){
