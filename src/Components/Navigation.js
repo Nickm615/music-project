@@ -10,6 +10,7 @@ import IndividualSong from '../Pages/Individuals/IndividualSong';
 import IndividualPerformer from '../Pages/Individuals/IndividualPerformer'
 import { Header } from "./Header"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
 function Navigation() {
     const lang = useLang();
     const updateLang = useLangUpdate();

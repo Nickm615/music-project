@@ -1,4 +1,4 @@
-import { camelCasePropertyNameResolver, DeliveryClient } from '@kentico/kontent-delivery';
+import { camelCasePropertyNameResolver, DeliveryClient } from '@kontent-ai/delivery-sdk';
 import packageInfo from "../../package.json";
 
 const sourceTrackingHeaderName = "X-KC-SOURCE";
