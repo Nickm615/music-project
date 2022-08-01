@@ -26,7 +26,7 @@ export default function Songs(props) {
                     <div>
                         
                         {isLoaded? (data.data.items.map((song)=>
-                        <Card key = {song.system.codename} route={`${song.system.codename}`} title={song.elements.name.value} 
+                        <Card key = {song.system.codename} id={song.system.id} route={`${song.system.codename}`} title={song.elements.name.value} 
                         art={song.elements.album.linkedItems[0].elements.artwork.value[0].url + '?w=100&h=100'}
                         />
                         )):(<SpinnerCircular />)}
@@ -39,7 +39,7 @@ export default function Songs(props) {
                     <div>
                         
                         {isLoaded? (data.data.items.map((song)=>
-                        <Card key = {song.system.codename} route={`${song.system.codename}`} title={song.elements.name.value} 
+                        <Card key = {song.system.codename} id={song.system.id} route={`${song.system.codename}`} title={song.elements.name.value} 
                         art={song.elements.album.linkedItems[0].elements.artwork.value[0].url + '?w=100&h=100'}
                         />
                         )):(<SpinnerCircular />)}
@@ -52,7 +52,7 @@ export default function Songs(props) {
                     <div>
                         
                         {isLoaded? (data.data.items.map((song)=>
-                        <Card key = {song.system.codename} route={`${song.system.codename}`} title={song.elements.name.value} 
+                        <Card key = {song.system.codename} id={song.system.id} route={`${song.system.codename}`} title={song.elements.name.value} 
                         art={song.elements.album.linkedItems[0].elements.artwork.value[0].url + '?w=100&h=100'}
                         />
                         )):(<SpinnerCircular />)}
@@ -65,7 +65,7 @@ export default function Songs(props) {
                         <div>
                             
                             {isLoaded? (data.data.items.map((song)=>
-                            <Card key = {song.system.codename} route={`${song.system.codename}`} title={song.elements.name.value} 
+                            <Card key = {song.system.codename} id={song.system.id} route={`${song.system.codename}`} title={song.elements.name.value} 
                             art={song.elements.album.linkedItems[0].elements.artwork.value[0].url + '?w=100&h=100'}
                             />
                             )):(<SpinnerCircular />)}
@@ -78,7 +78,7 @@ export default function Songs(props) {
                             <div>
                                 
                                 {isLoaded? (data.data.items.map((song)=>
-                                <Card key = {song.system.codename} route={`/${song.system.codename}`} title={song.elements.name.value} 
+                                <Card key = {song.system.codename} id={song.system.id} route={`/${song.system.codename}`} title={song.elements.name.value} 
                                 art={song.elements.album.linkedItems[0].elements.artwork.value[0].url + '?w=100&h=100'}
                                 />
                                 )):(<SpinnerCircular />)}

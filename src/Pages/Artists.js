@@ -27,7 +27,7 @@ export default function Artists(props) {
             return(
                 <div>
                     {isLoaded? (data.data.items.map((item)=>
-                        <Card key = {item.system.codename} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
+                        <Card key = {item.system.codename} id={item.system.id} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
                     )):(<SpinnerCircular />)}
                 </div>
             )
@@ -37,7 +37,7 @@ export default function Artists(props) {
             return(
                 <div>
                     {isLoaded? (data.data.items.map((item)=>
-                        <Card key = {item.system.codename} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
+                        <Card key = {item.system.codename} id={item.system.id} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
                     )):(<SpinnerCircular />)}
                 </div>
             )
@@ -47,7 +47,7 @@ export default function Artists(props) {
             return(
                 <div>
                     {isLoaded? (data.data.items.map((item)=>
-                        <Card key = {item.system.codename} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
+                        <Card key = {item.system.codename} id={item.system.id} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
                     )):(<SpinnerCircular />)}
                 </div>
             )
@@ -57,7 +57,7 @@ export default function Artists(props) {
             return(
                 <div>
                     {isLoaded? (data.data.items.map((item)=>
-                        <Card key = {item.system.codename} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
+                        <Card key = {item.system.codename} id={item.system.id} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
                     )):(<SpinnerCircular />)}
                 </div>
             )
@@ -67,7 +67,7 @@ export default function Artists(props) {
             return(
                 <div>
                     {isLoaded? (data.data.items.map((item)=>
-                        <Card key = {item.system.codename} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
+                        <Card key = {item.system.codename} id={item.system.id} route={`${item.system.codename}`} title={item.elements.name.value} art={item.elements.photo.value[0].url + '?w=100&h=100'}/>
                     )):(<SpinnerCircular />)}
                 </div>
             )
