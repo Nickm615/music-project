@@ -5,7 +5,7 @@ const pHolder = require("../assets/p-holder.jpg")
 export default function Card(props) {
     return (
         <Link className='card-body' to={props.route}>
-            <div className={ `card data-kontent-item-id="${props.id}"`}>
+            <div className= "card" data-kontent-item-id="${props.id}">
                 <h2 className="card-heading">{props.title}</h2>
                 <img src= {props.art} alt = 'placeholder'/>
             </div>
