@@ -13,10 +13,10 @@ if(preview === true){
     switch (lang) {
         case 'en':
             return (
-                <div className="card">
-                    <h2>{props.title}</h2>
-                    <h3>By {props.artist}</h3>
-                    <img src= {props.art} alt = 'album image'/>
+                <div className="card" data-kontent-item-id = {props.id}>
+                    <h2 data-kontent-element-codename = {props.elements[3].codename}>{props.title}</h2>
+                    <h3 data-kontent-element-codename = {props.elements[5].codename}>By {props.artist}</h3>
+                    <img data-kontent-element-codename = {props.elements[4].codename} src= {props.art} alt = 'album image'/>
                     <div>
                     {props.songs.map((song) => 
                         <SongListItem key = {song.system.codename} route = {`/preview/songs/${song.system.codename}`} title = {song.elements.name.value}/>

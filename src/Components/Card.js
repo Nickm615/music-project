@@ -7,7 +7,7 @@ export default function Card(props) {
     console.log(props.id)
     return (
         <Link className='card-body' to={props.route}>
-            <div className= "card" data-kontent-item-id={props.id}>
+            <div className= "card" >
                 <h2 className="card-heading">{props.title}</h2>
                 <img src= {props.art} alt = 'placeholder'/>
             </div>

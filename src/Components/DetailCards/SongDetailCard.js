@@ -39,15 +39,15 @@ export default function SongDetailCard(props) {
 
 
     return (
-            <div className="card">
-                <h2>{props.title}</h2>
-                <img src= {props.art + '?w=300&h=300'} alt = 'album image'/>
-                <a href={props.link}>
+            <div data-kontent-item-id = {props.id} className="card">
+                <h2 data-kontent-element-codename = {props.elements[0].codename}>{props.title}</h2>
+                <img data-kontent-element-codename = {props.elements[4].codename} src= {props.art + '?w=300&h=300'} alt = 'album image'/>
+                <a data-kontent-element-codename = {props.elements[1].codename} href={props.link}>
                     <img style={{height:"50px", display:"block", margin:"auto"}} src = {playButton}/>
                 </a>
                 
                 
-                <div>
+                <div data-kontent-element-codename = {props.elements[5].codename}>
                     {parse(resolvedRichText.html)}
                 </div>
                 

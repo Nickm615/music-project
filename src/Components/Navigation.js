@@ -33,13 +33,14 @@ function Navigation() {
         debug: true,
         queryParam: "preview-mode"
       });
+      return () => {
+        kontentSmartLink.destroy();
+      };
       console.log(KontentSmartLink)
       // document.body.setAttribute("data-kontent-project-id", "b3e0a132-8366-0046-082c-844a2879e80d");
       // document.body.setAttribute("data-kontent-language-codename", `${lang}`)
   
-      return () => {
-        kontentSmartLink.destroy();
-      };
+   
   
   
         switch (lang) {

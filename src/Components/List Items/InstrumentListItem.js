@@ -1,7 +1,7 @@
 export default function InstrumentListItem(props) {
     return(
-        <div className="list-item">
-            <h4>{props.name}</h4>
+        <div data-kontent-item-id = {props.id} className="list-item">
+            <h4 data-kontent-element-codename= {props.codename}>{props.name}</h4>
         </div>
     )
 }

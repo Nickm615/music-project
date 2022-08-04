@@ -12,17 +12,17 @@ export default function ArtistDetailCard(props) {
         switch (lang) {
             case 'en':
                 return (
-                    <div className="card">
-                        <h2>{props.title}</h2>
-                        <img src= {props.art} alt = 'artist image'/>
+                    <div data-kontent-item-id = {props.id} className="card">
+                        <h2 data-kontent-element-codename = {props.elements[2].codename}>{props.title}</h2>
+                        <img data-kontent-element-codename = {props.elements[6].codename} src= {props.art} alt = 'artist image'/>
                         <div>
-                            <h3>Albums</h3>
+                            <h3 data-kontent-element-codename = {props.elements[0].codename}>Albums</h3>
                             {props.albums.map((album) => 
                         //    console.log(song)
                             <AlbumListItem key = {album.system.codename} route = {`/preview/albums/${album.system.codename}`} title = {album.elements.name.value} art = {album.elements.artwork.value[0].url+'?w=100&h=100'}/>
                                 
                         )}
-                            <h3>Performers:</h3>
+                            <h3 data-kontent-element-codename = {props.elements[5].codename}>Performers:</h3>
                             {props.performers.map((performer) =>
                             <PerformerListItem key = {performer.system.codename} name={performer.elements.name.value} route = {`/preview/performers/${performer.system.codename}`}/>
                             )}
