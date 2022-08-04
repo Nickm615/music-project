@@ -10,6 +10,8 @@ import IndividualSong from '../Pages/Individuals/IndividualSong';
 import IndividualPerformer from '../Pages/Individuals/IndividualPerformer'
 import { Header } from "./Header"
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import KontentSmartLink from '@kentico/kontent-smart-link';
+
 
 function Navigation() {
     const lang = useLang();
@@ -23,6 +25,23 @@ function Navigation() {
      })
   
     useEffect(()=>{
+      const kontentSmartLink = KontentSmartLink.initialize({
+        defaultDataAttributes: {
+          projectId: "b3e0a132-8366-0046-082c-844a2879e80d",
+          languageCodename: "en",
+        },
+        debug: true,
+        queryParam: "preview-mode"
+      });
+      console.log(KontentSmartLink)
+      // document.body.setAttribute("data-kontent-project-id", "b3e0a132-8366-0046-082c-844a2879e80d");
+      // document.body.setAttribute("data-kontent-language-codename", `${lang}`)
+  
+      return () => {
+        kontentSmartLink.destroy();
+      };
+  
+  
         switch (lang) {
 
           case 'es':
